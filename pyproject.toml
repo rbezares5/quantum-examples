@@ -6,7 +6,6 @@ authors = [
     { name = "Raul Bezares", email = "rbezares5@gmail.com" }
 ]
 dependencies = [
-    "ruff>=0.2.1",
     "numpy>=1.24.4",
     "dwave-neal>=0.6.0",
     "pyqubo>=1.3.0",
@@ -24,7 +23,10 @@ build-backend = "hatchling.build"
 
 [tool.rye]
 managed = true
-dev-dependencies = []
+dev-dependencies = [
+    "ruff>=0.2.2",
+    "sphinx>=7.1.2",
+]
 
 [tool.hatch.metadata]
 allow-direct-references = true
