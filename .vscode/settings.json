@@ -1,0 +1,12 @@
+{
+    "python.analysis.ignore": [
+        "*"
+    ],
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "explicit",
+            "source.organizeImports.ruff": "explicit"
+        }
+    },
+    "python.analysis.typeCheckingMode": "basic"
+}
