@@ -1,4 +1,4 @@
-"""Number Partition problem solver script.
+"""Number Partition problem solver module.
 
 Minimize (a_1*x_1 + a_2*x_2 + ...)^2
 
@@ -23,7 +23,12 @@ TOKEN = ""  # input your token or configure solver with "dwave config create"
 def print_sample(data: np.ndarray, sol: dimod.SampleSet) -> None:
     """Display the result in a comprehensive way.
 
-    This function takes the initial data and the solution obtained as parameters.
+    Args:
+        data (np.ndarray): The startind data.
+        sol (dimod.SampleSet): The solution to display.
+
+    Returns:
+        None: Displays the result on screen.
     """
     a = []
     b = []
@@ -44,7 +49,15 @@ def print_sample(data: np.ndarray, sol: dimod.SampleSet) -> None:
 
 
 def number_partition(data: str="dummy", sampler: str="sim") -> None:
-    """Problem solver implementation function."""
+    """Problem solver implementation function.
+
+    Args:
+        data (str): To select whether to use premade dummy data or random data.
+        sampler (str): To select whether to use the simulated annealing method or the online one.
+
+    Returns:
+        None: Nothing
+    """
     # Generate problem data or take sample dummy data
     rng = np.random.default_rng()   # First create instance of np.Generator class
     a = rng.integers(low=1, high=5, size=10) if data == "random" else [2, 3, 4, 3, 2]
@@ -89,4 +102,4 @@ def number_partition(data: str="dummy", sampler: str="sim") -> None:
 
 
 if __name__ == "__main__":
-    number_partition(data="sim", sampler="online")
+    number_partition(data="dummy", sampler="sim")
