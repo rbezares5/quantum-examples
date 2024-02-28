@@ -6,12 +6,16 @@
 Welcome to Optimization Problems's documentation!
 =================================================
 
+.. note::
+
+   This project is under development.
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   modules
-   optimization_problems
+   numpart
+   api
 
 
 Indices and tables
